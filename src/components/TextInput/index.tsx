@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, KeyboardEvent } from "react";
 
 import pathIconArrow from "../../assets/images/icon-arrow.svg";
 import { Spinner } from "../Spinner";
@@ -7,12 +7,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   asButton?: boolean;
   onClick?: () => void;
   loading?: boolean;
+  onKeyDown?: (data: KeyboardEvent<HTMLInputElement>) => void;
 }
 
 export const TextInput = ({
   asButton,
   onClick,
   loading,
+  onKeyDown,
   ...props
 }: InputProps) => {
   return (
@@ -21,6 +23,7 @@ export const TextInput = ({
         {...props}
         type="text"
         className="w-full max-w-96 rounded-l-lg py-3 px-2 text-sm outline-none"
+        onKeyDown={onKeyDown}
       />
       {asButton && (
         <button

@@ -78,6 +78,7 @@ function App() {
           onClick={handleSearchAddress}
           onChange={(event) => setIpAddress(event.target.value)}
           loading={loadBtn}
+          onKeyDown={(event) => event.key === 'Enter' && handleSearchAddress()}
         />
 
         {!loading && informationsAddressTrack && (
