@@ -20,3 +20,24 @@ Este projeto foi criado baseado no desafio do: <a href="https://www.frontendment
   <li>Leaflet</li>
   <li>Tailwind</li>
 </ul>
+
+## Rodando projeto
+
+Para rodar o projeto é preciso ter <strong>NPM</strong> e <strong>NODE</strong> em sua máquina.
+
+- Rode este comando para instalar as dependências da aplicação
+```
+npm install
+```
+
+- Rode este comando para rodar o projeto
+```
+npm run dev
+```
+
+## Rodando projeto - Docker
+
+- Rode este comando para gerar a imagem do projeto
+```
+docker build -t address-ip-tracker-react .
+```
